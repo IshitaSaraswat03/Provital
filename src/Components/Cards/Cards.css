@@ -1,0 +1,132 @@
+.cards-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  .cards-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 85%;
+    padding: 20px 0;
+    scrollbar-width: none;
+  }
+  
+  .cards-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    min-width: 493px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .card-image {
+    width: 493px;
+    height: 320px;
+    object-fit: cover;
+  }
+  
+  .overlay-button {
+    position: absolute;
+    bottom: 190px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .overlay-button svg {
+    margin-right: 5px;
+  }
+  
+  .card-content {
+    padding: 20px;
+    height: 130px;
+    text-align: left;
+  }
+  
+  .card-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .arrow {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .arrow:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .left-arrow {
+    left: 20px;
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .cards-container {
+      width: 90%;
+      height: 80%;
+      padding: 0;
+    }
+  
+    .card {
+      min-width: 90%;
+      margin: 0 10px;
+    }
+  
+    .card-content {
+      padding: 15px;
+    }
+    .card:hover{
+      transform: scale(1.01);
+    }
+    .arrow {
+      display: none;
+    }
+  }

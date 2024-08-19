@@ -1,0 +1,164 @@
+.body{
+  overflow: hidden;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ellipse {
+  position: absolute;
+  width: 350px;
+  height: 360px;
+  top: 200px;
+  left: 500px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(15px);
+  background-image: radial-gradient(circle,
+      rgba(251, 241, 220, 1),
+      rgba(251, 241, 220, 0));
+}
+
+.search-bar-box {
+  position: absolute;
+  top: 390px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 70%;
+  /* Adjust width as needed */
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.search-item i {
+  font-size: 16px;
+  color: #666;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.search-bar button {
+  gap: 20px;
+  width: 150px;
+  background: linear-gradient(to right, #5bcac1, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin-left: 130px;
+  margin-bottom: 200px;
+}
+
+.hero-text p {
+  font-size: 45px;
+  font-weight: 540;
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.hero-text .highlight {
+  background: linear-gradient(70deg, #0072ff, #5bcac1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub-text {
+  font-size: 20px;
+  color: #666;
+}
+
+.gradient-border {
+  position: absolute;
+  top: 569px;
+  width: 100%;
+  border: 20px solid;
+  border-image-source: linear-gradient(to right, #f0c971 11.7%, #e5688c 63.17%);
+  border-image-slice: 1;
+  transform: skewY(-2deg);
+  z-index: 1;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+  .ellipse {
+    display: none;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-text {
+    order: 1;
+    margin: 20px 0;
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .search-bar-box {
+    order: 2;
+    position: static;
+    transform: none;
+    width: 80%;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    border-image: linear-gradient(to right, #f0c971, #e5688c) 1; 
+    padding: 20px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .search-item {
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar button {
+    margin-top: 10px;
+    padding: 10px 20px;
+  }
+  .carousel-space {
+    order: 3;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+}
